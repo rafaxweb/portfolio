@@ -1,0 +1,10 @@
+* {
+    text-align: center;
+}
+
+p {
+    color: var(--principal-oscuro);
+    padding: 30px;
+    margin-top: 30vh;
+    font-size: 2em;
+}

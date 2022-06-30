@@ -1,0 +1,101 @@
+section {
+    max-width: 768px;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    margin: auto;
+    font-size: 2em;
+}
+
+.principal {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 760px;
+}
+
+.github {
+    width: 150px;
+    color: var(--principal-claro);
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 31%);
+    box-shadow: 0 9px hsl(0, 0%, 21%);
+  }
+
+  .github:hover {
+      box-shadow: 0 8px #353535ff;
+      transform: translateY(1px);
+  }
+
+  .github:active {
+      box-shadow: 0 5px #353535ff;
+      transform: translateY(4px);
+  }
+
+.linkedin {
+    width: 170px;
+    color: var(--principal-claro);
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #0078d4ff;
+    box-shadow: 0 9px hsl(206, 100%, 32%);
+}
+
+.linkedin:hover {
+    box-shadow: 0 8px hsl(206, 100%, 32%);
+    transform: translateY(1px);
+}
+
+.linkedin:active {
+    box-shadow: 0 5px hsl(206, 100%, 32%);
+    transform: translateY(4px);
+}
+
+a {
+    text-decoration: none;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--principal-claro);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+img {
+    max-height: 1.1em;
+}
+
+.boton-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+p {
+    margin-top: 20px;
+    max-width: 95%;
+}
+
+@media screen and (max-width: 600px) {
+
+    iframe {
+        max-width: 95%;
+    }
+
+    .principal {
+        flex-wrap: wrap;
+    }
+
+    .boton-social {
+        min-width: 90%;
+        margin-top: 20px;
+    }
+}

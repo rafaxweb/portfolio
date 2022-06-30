@@ -1,0 +1,48 @@
+<section class="proyectos-destacados">
+  <h1>Mis proyectos</h1>
+  <p>Etiquetas:</p>
+  <button class="selector__etiquetas" (click)="this.obtenerProyectos()">
+    Mostrar todo
+  </button>
+  <button
+    class="selector__etiquetas"
+    *ngFor="let etiqueta of etiquetas"
+    (click)="filtrarEtiquetas(etiqueta)"
+  >
+    {{ etiqueta }}
+  </button>
+  <p>Utiliza las etiquetas para filtrar por tecnología o herramientas.</p>
+  <div class="proyectos-destacados__main">
+    <div
+      *ngFor="let proyecto of proyectos"
+      class="proyectos-destacados__tarjeta"
+    >
+    <a href="{{ proyecto.url }}">
+      <img src="{{ proyecto.imagen }}" alt="{{ proyecto.nombre }} imagen" />
+      <p class="proyectos-destacados__main_texto">{{ proyecto.nombre }}</p>
+    </a>
+    <div class="etiquetas">
+      <div class="etiquetas_background"></div>
+      <div class="etiquetas__links">
+        <a href="{{ proyecto.url }}">
+          <img class="img-responsive" src="../../../assets/language_FILL0_wght400_GRAD0_opsz48.svg" alt="Visitar">
+            <p>Visitar</p>
+          </a>
+          <a href="{{ proyecto.github }}">
+            <img class="img-responsive" src="../../../assets/GitHub.svg" alt="">
+            <p>Github</p>
+          </a>
+        </div>
+        <div class="etiquetas__flotantes">
+          <p class="etiquetas__flotantes_text">Etiquetas: </p>
+          <span
+            class="etiquetas__unica"
+            *ngFor="let etiqueta of proyecto.lenguajes"
+            >{{ etiqueta }}</span
+          >
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

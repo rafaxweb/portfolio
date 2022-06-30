@@ -1,0 +1,16 @@
+<section class="proyectos-destacados">
+
+  <h1>Algunos de mis proyectos</h1>
+
+  <div class="proyectos-destacados__main">
+    <div *ngFor="let proyecto of proyectos" class="proyectos-destacados__tarjeta">
+      <a href="{{proyecto.url}}">
+        <img src="{{proyecto.imagen}}" alt="{{proyecto.nombre}} imagen">
+        <p>{{proyecto.nombre}}</p>
+      </a>
+    </div>
+  </div>
+  <a class="proyectos-destacados__mostrar-mas" href="proyectos">Mostrar más</a>
+
+
+</section>

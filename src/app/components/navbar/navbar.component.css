@@ -1,0 +1,66 @@
+nav {
+    display: inline-block;
+    align-items: center;
+    height: 100%;
+}
+
+button {
+    display: block;
+    padding: 10px;
+    height: 100%;
+    font-size: 1.5rem;
+
+    background-color: var(--principal-medio);
+    border: none;
+    color: var(--principal-claro);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.navbar-enlaces {
+    animation-name: entrada-enlaces;
+    z-index: 9998;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.275, 0.885, 0.3, 1.1);
+
+    position: fixed;
+    top: 65px;
+    right: 0%;
+    width: 300px;
+    text-align: center;
+    background-color: var(--principal-medio);
+    line-height: 50px;
+}
+
+.navbar-enlaces a {
+    font-size: 1.5em;
+    display: block;
+    text-decoration: none;
+    color: var(--principal-claro);
+    border-top: solid var(--principal-oscuro);
+}
+
+.navbar-enlaces a:hover {
+    color: var(--principal-oscuro);
+    background-color: var(--principal-claro);
+}
+
+@keyframes entrada-enlaces {
+    0% {
+        top: -130px;
+    }
+
+    100% {
+        top: 65px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .navbar-enlaces {
+        width: 100%;
+    }
+}
